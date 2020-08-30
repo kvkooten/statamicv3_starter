@@ -1,0 +1,6 @@
+// Import Bootstrap overrides and Bootstrap
+@import 'modules/variables';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Import everything else
+@import 'global/base';
