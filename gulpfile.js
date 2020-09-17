@@ -59,7 +59,7 @@ gulp.task('cleanup', function() {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
   return gulp.src("resources/scss/site.scss")
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 versions'))
     .pipe(header(banner, { package : package }))
     .pipe(gulp.dest("public/css"))
